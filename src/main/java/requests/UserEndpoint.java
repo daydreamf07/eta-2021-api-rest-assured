@@ -57,7 +57,7 @@ public class UserEndpoint extends RequestBase{
                         spec(spec).
                         header("Content-Type","application/json").
                         when().
-                        delete("usuarios/"+user.userID);
+                        delete("usuarios/"+user.getUserId());
         return deleteUserResponse;
     }
 }

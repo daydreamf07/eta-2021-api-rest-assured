@@ -3,5 +3,7 @@ public class Constants {
     public static final String MESSAGE_SUCCESS_DELETION = "Registro excluído com sucesso";
     public static final String MESSAGE_SUCCESS_LOGIN = "Login realizado com sucesso";
     public static final String MESSAGE_FAILED_LOGIN = "Email e/ou senha inválidos";
+    public static final String MESSAGE_SUCCESS_USER_CREATION = "Cadastro realizado com sucesso";
+    public static final String MESSAGE_SUCCESS_PRODUCT_CREATION = "Cadastro realizado com sucesso";
 
 }

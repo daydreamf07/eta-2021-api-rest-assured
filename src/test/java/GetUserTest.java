@@ -4,7 +4,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import static org.hamcrest.Matchers.*;
-import static io.restassured.RestAssured.*;
 import static requests.UserEndpoint.*;
 
 import org.testng.annotations.DataProvider;

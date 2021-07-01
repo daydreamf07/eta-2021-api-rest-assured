@@ -21,8 +21,16 @@ public class User {
         this.authToken= authToken;
     }
 
+    public String getUserAuthToken(){
+        return this.authToken;
+    }
+
     public void setUserId(String userID){
         this.userID = userID;
+    }
+
+    public String getUserId(){
+        return this.userID;
     }
 
     public String getUserCredentialsAsJson(){
