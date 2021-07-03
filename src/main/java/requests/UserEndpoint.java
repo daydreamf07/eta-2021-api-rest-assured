@@ -51,6 +51,24 @@ public class UserEndpoint extends RequestBase{
         return registerUserResponse;
     }
 
+    public static Response editUserRequest(RequestSpecification spec, User user, User editData){
+        JSONObject userJsonRepresentation = new JSONObject();
+        userJsonRepresentation.put("nome", editData.name);
+        userJsonRepresentation.put("email",editData.email);
+        userJsonRepresentation.put("password", editData.password);
+        userJsonRepresentation.put("administrador",editData.isAdmin);
+
+        Response editUserResponse =
+                given().
+                        spec(spec).
+                        header("Content-Type","application/json").
+                        and().
+                        body(userJsonRepresentation.toJSONString()).
+                        when().
+                        put("usuarios/"+user.getUserId());
+        return editUserResponse;
+    }
+
     public static Response deleteUserRequest(RequestSpecification spec, User user){
         Response deleteUserResponse =
                 given().

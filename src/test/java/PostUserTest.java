@@ -1,5 +1,6 @@
 import io.restassured.response.Response;
 import models.User;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -28,6 +29,11 @@ public class PostUserTest extends TestBase{
         emptyAdmin = new User("emptyAdmin", "emptyAdmin@email.com", "password123", "");
         differentAdminValue = new User("differentAdminValue", "differentAdminValue@email.com", "password123", "value");
         allEmptyUser = new User("", "", "", "");
+    }
+
+    @AfterClass
+    public void eraseTestData(){
+        deleteUserRequest(SPEC, validUser);
     }
 
     @Test
